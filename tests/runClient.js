@@ -1,12 +1,13 @@
-// const TranslationClient = require('../src/clientLibrary'); 
+const axios = require('axios');
 
-// // Manually testing
-// const client = new TranslationClient('http://localhost:3000', 5, 1000); 
+async function testStatusPolling() {
+    try {
+        console.log('Testing status endpoint...');
+        const response = await axios.get('http://localhost:3000/status');
+        console.log(`Server response: ${JSON.stringify(response.data)}`);
+    } catch (error) {
+        console.error(`Error accessing server: ${error.message}`);
+    }
+}
 
-// client.pollStatus((err, message) => {
-//     if (err) {
-//         console.error(`Error: ${err}`);
-//     } else {
-//         console.log(`Success: ${message}`);
-//     }
-// });
+testStatusPolling();

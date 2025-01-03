@@ -78,16 +78,20 @@ ERROR_PROBABILITY=0.1     # Probability of returning 'error' (0.1 = 10%)
 # Usage
 
 ## Start the Server
+
 ### Run the server manually:
-
-
 ```bash
 npm start
 ```
-The server will be available at http://localhost:3000.
 
-# Test the /status Endpoint
+The server will be available at http://localhost:3000
 
+## Option 1: Run the script:
+```bash
+node tests/runClient.js
+```
+
+# Option 2: Test the /status Endpoint
 ## Use curl or any HTTP client to test the /status endpoint:
 ```bash
 curl http://localhost:3000/status
@@ -100,7 +104,7 @@ curl http://localhost:3000/status
 
 # Run the Client Library
 
-## Use the client library to poll the server for status updates. Example script (tests/runClient.js):
+## Use the client library to poll the server for status updates:
 ```bash 
 const TranslationClient = require('../src/clientLibrary');
 
@@ -115,10 +119,6 @@ client.pollStatus((err, message) => {
 });
 ```
 
-## Run the script:
-```bash
-node tests/runClient.js
-```
 ## Run the Integration Test
 
 The integration test demonstrates how the server and client work together:
@@ -145,13 +145,12 @@ Server shut down gracefully.
 ```
 
 # Configuration
-
 ## Scripts
 
 Command	Description
 ```bash
-npm start		// Starts the server.
-npm run dev		// Starts the server in development mode.
+npm start		    // Starts the server.
+npm run dev		    // Starts the server in development mode.
 npm run run-test	// Runs the integration test.
 ```
 
@@ -167,17 +166,17 @@ npm run run-test	// Runs the integration test.
 
 # Contributing
 ## 1.Fork the repository.
-## 2. Create a feature branch:
+## 2.Create a feature branch:
 ```bash
 git checkout -b feature-name
 ```
 
-## 3.Commit your changes:
+## 3. Commit your changes:
 ```bash
 git commit -m "Add feature"
 ```
 
-## 4.Push the branch:
+## 4. Push the branch:
 ```bash
 git push origin feature-name
 ```

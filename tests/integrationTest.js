@@ -1,5 +1,5 @@
 const { exec } = require('child_process');
-const TranslationClient = require('../src/clientLibrary'); // Ensure the path to your client library is correct
+const TranslationClient = require('../src/clientLibrary'); 
 
 (async () => {
     console.log('Starting integration test...');
@@ -23,10 +23,9 @@ const TranslationClient = require('../src/clientLibrary'); // Ensure the path to
     setTimeout(() => {
         console.log('Server started. Initializing client...');
 
-        // Initialize the TranslationClient
         const client = new TranslationClient('http://localhost:3000', 5, 1000);
 
-        // Poll the server for status
+        // Print logs from the client
         client.pollStatus((err, message) => {
             if (err) {
                 console.error(`Client Error: ${err}`);
