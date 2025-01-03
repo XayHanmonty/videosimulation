@@ -1,5 +1,3 @@
-Here’s the README.md in full Markdown:
-
 # Heygen Video Translation Simulation
 
 This project simulates a video translation backend and provides a client library to interact with it. The server simulates translation status updates (`pending`, `completed`, or `error`), while the client library intelligently polls the server using exponential backoff.
@@ -52,7 +50,6 @@ heygen-assignment/
 ├── tests/
 │   ├── integrationTest.js  # Integration test for server and client
 │   └── runClient.js        # Example usage of the client library
-├── .env                    # Environment variables
 ├── nodemon.json            # nodemon configuration
 ├── package.json            # Dependencies and scripts
 ├── README.md               # Project documentation
@@ -73,14 +70,14 @@ cd heygenassignment
 npm install
 ```
 
-##3.	Configure the server behavior using a config.js file in the root directory:
+## 3.	Configure the server behavior using a config.js file in the root directory:
 ```bash
 TRANSLATION_DELAY=10000   # Delay before the status changes to 'completed' (in ms)
 ERROR_PROBABILITY=0.1     # Probability of returning 'error' (0.1 = 10%)
 ```
-#Usage
+# Usage
 
-##Start the Server
+## Start the Server
 ```bash
 Run the server manually:
 ```
@@ -90,7 +87,7 @@ npm start
 ```
 The server will be available at http://localhost:3000.
 
-#Test the /status Endpoint
+# Test the /status Endpoint
 
 Use curl or any HTTP client to test the /status endpoint:
 
@@ -101,7 +98,7 @@ Possible responses:
 	•	{ "result": "completed" }
 	•	{ "result": "error" }
 
-Run the Client Library
+#Run the Client Library
 
 Use the client library to poll the server for status updates. Example script (tests/runClient.js):
 
@@ -117,19 +114,20 @@ client.pollStatus((err, message) => {
     }
 });
 
-Run the script:
-
+## Run the script:
+```bash
 node tests/runClient.js
-
-Run the Integration Test
+```
+## Run the Integration Test
 
 The integration test demonstrates how the server and client work together:
 ```bash
 npm run run-test
 ```
+
+## Expected Output:
+
 ```bash
-Expected Output:
-```
 Starting integration test...
 Server is starting...
 Server started. Initializing client...
@@ -143,23 +141,20 @@ Client Success: Translation completed!
 Stopping server...
 Shutting down server...
 Server shut down gracefully.
+```
 
-Configuration
+# Configuration
 
-Environment Variables
-
-Variable	Default Value	Description
-TRANSLATION_DELAY	10000	Time in milliseconds before status changes.
-ERROR_PROBABILITY	0.1	Probability of returning an error result.
-
-Scripts
+## Scripts
 
 Command	Description
+```bash
 npm start	Starts the server.
 npm run dev	Starts the server in development mode.
 npm run run-test	Runs the integration test.
+```
 
-Future Enhancements
+## Future Enhancements
 	1.	Docker Support:
 	•	Containerize the server and client for deployment.
 	2.	More APIs:
@@ -169,28 +164,30 @@ Future Enhancements
 	4.	Automated Testing:
 	•	Integrate with Jest or Mocha for additional test cases.
 
-Contributing
+# Contributing
 	1.	Fork the repository.
 	2.	Create a feature branch:
-
+```bash
 git checkout -b feature-name
+```
 
 
-3.	Commit your changes:
-
+## 3.	Commit your changes:
+```bash
 git commit -m "Add feature"
+```
 
-
-4.	Push the branch:
-
+## 4.	Push the branch:
+```bash
 git push origin feature-name
+```
 
-5.	Open a pull request.
+## 5.	Open a pull request.
 
-#License
+# License
 
 This project is licensed under the ISC License.
 
-#Contact
+# Contact
 
 For issues, please visit the GitHub Issues page.
