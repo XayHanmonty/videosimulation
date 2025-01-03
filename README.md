@@ -57,6 +57,7 @@ heygen-assignment/
 ├── package.json            # Dependencies and scripts
 ├── README.md               # Project documentation
 └── .gitignore              # Ignored files and folders
+```
 
 # Installation
 
@@ -65,27 +66,28 @@ heygen-assignment/
 ```bash
 git clone https://github.com/XayHanmonty/heygenassignment.git
 cd heygenassignment
-
+```
 
 ## 2.	Install dependencies:
 ```bash
 npm install
-
+```
 
 ##3.	Configure the server behavior using a config.js file in the root directory:
 ```bash
 TRANSLATION_DELAY=10000   # Delay before the status changes to 'completed' (in ms)
 ERROR_PROBABILITY=0.1     # Probability of returning 'error' (0.1 = 10%)
-
+```
 #Usage
 
 ##Start the Server
 ```bash
 Run the server manually:
+```
 
 ```bash
 npm start
-
+```
 The server will be available at http://localhost:3000.
 
 #Test the /status Endpoint
@@ -124,9 +126,10 @@ Run the Integration Test
 The integration test demonstrates how the server and client work together:
 ```bash
 npm run run-test
+```
 ```bash
 Expected Output:
-
+```
 Starting integration test...
 Server is starting...
 Server started. Initializing client...
