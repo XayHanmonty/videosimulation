@@ -78,9 +78,8 @@ ERROR_PROBABILITY=0.1     # Probability of returning 'error' (0.1 = 10%)
 # Usage
 
 ## Start the Server
-```bash
-Run the server manually:
-```
+### Run the server manually:
+
 
 ```bash
 npm start
@@ -89,19 +88,20 @@ The server will be available at http://localhost:3000.
 
 # Test the /status Endpoint
 
-Use curl or any HTTP client to test the /status endpoint:
-
+## Use curl or any HTTP client to test the /status endpoint:
+```bash
 curl http://localhost:3000/status
+```
 
-Possible responses:
-	•	{ "result": "pending" }
-	•	{ "result": "completed" }
-	•	{ "result": "error" }
+## Possible responses:
+	• { "result": "pending" }
+	• { "result": "completed" }
+	• { "result": "error" }
 
-#Run the Client Library
+# Run the Client Library
 
-Use the client library to poll the server for status updates. Example script (tests/runClient.js):
-
+## Use the client library to poll the server for status updates. Example script (tests/runClient.js):
+```bash 
 const TranslationClient = require('../src/clientLibrary');
 
 const client = new TranslationClient('http://localhost:3000', 5, 1000);
@@ -113,6 +113,7 @@ client.pollStatus((err, message) => {
         console.log(`Success: ${message}`);
     }
 });
+```
 
 ## Run the script:
 ```bash
@@ -149,45 +150,42 @@ Server shut down gracefully.
 
 Command	Description
 ```bash
-npm start	Starts the server.
-npm run dev	Starts the server in development mode.
-npm run run-test	Runs the integration test.
+npm start		// Starts the server.
+npm run dev		// Starts the server in development mode.
+npm run run-test	// Runs the integration test.
 ```
 
 ## Future Enhancements
-	1.	Docker Support:
-	•	Containerize the server and client for deployment.
-	2.	More APIs:
-	•	Add job IDs to simulate multiple concurrent translations.
-	3.	Advanced Logging:
-	•	Add timestamps and log levels (info, error, debug).
-	4.	Automated Testing:
-	•	Integrate with Jest or Mocha for additional test cases.
+1. Docker Support:
+• Containerize the server and client for deployment.
+2. More APIs:
+• Add job IDs to simulate multiple concurrent translations.
+3. Advanced Logging:
+• Add timestamps and log levels (info, error, debug).
+4. Automated Testing:
+• Integrate with Jest or Mocha for additional test cases.
 
 # Contributing
-	1.	Fork the repository.
-	2.	Create a feature branch:
+## 1.Fork the repository.
+## 2. Create a feature branch:
 ```bash
 git checkout -b feature-name
 ```
 
-
-## 3.	Commit your changes:
+## 3.Commit your changes:
 ```bash
 git commit -m "Add feature"
 ```
 
-## 4.	Push the branch:
+## 4.Push the branch:
 ```bash
 git push origin feature-name
 ```
 
-## 5.	Open a pull request.
+## 5.Open a pull request.
 
 # License
-
 This project is licensed under the ISC License.
 
 # Contact
-
 For issues, please visit the GitHub Issues page.
