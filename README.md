@@ -58,34 +58,37 @@ heygen-assignment/
 ├── README.md               # Project documentation
 └── .gitignore              # Ignored files and folders
 
-Installation
-	1.	Clone the repository:
+# Installation
 
+## 1. Clone the Repository
+
+```bash
 git clone https://github.com/XayHanmonty/heygenassignment.git
 cd heygenassignment
 
 
-	2.	Install dependencies:
-
+## 2.	Install dependencies:
+```bash
 npm install
 
 
-	3.	Configure the server behavior using a .env file in the root directory:
-
+##3.	Configure the server behavior using a config.js file in the root directory:
+```bash
 TRANSLATION_DELAY=10000   # Delay before the status changes to 'completed' (in ms)
 ERROR_PROBABILITY=0.1     # Probability of returning 'error' (0.1 = 10%)
 
-Usage
+#Usage
 
-Start the Server
-
+##Start the Server
+```bash
 Run the server manually:
 
+```bash
 npm start
 
 The server will be available at http://localhost:3000.
 
-Test the /status Endpoint
+#Test the /status Endpoint
 
 Use curl or any HTTP client to test the /status endpoint:
 
@@ -119,9 +122,9 @@ node tests/runClient.js
 Run the Integration Test
 
 The integration test demonstrates how the server and client work together:
-
+```bash
 npm run run-test
-
+```bash
 Expected Output:
 
 Starting integration test...
@@ -170,24 +173,21 @@ Contributing
 git checkout -b feature-name
 
 
-	3.	Commit your changes:
+3.	Commit your changes:
 
 git commit -m "Add feature"
 
 
-	4.	Push the branch:
+4.	Push the branch:
 
 git push origin feature-name
 
+5.	Open a pull request.
 
-	5.	Open a pull request.
-
-License
+#License
 
 This project is licensed under the ISC License.
 
-Contact
+#Contact
 
 For issues, please visit the GitHub Issues page.
-
-This is fully Markdown-formatted and ready to be used as a `README.md` file. Let me know if you’d like further adjustments! 😊
