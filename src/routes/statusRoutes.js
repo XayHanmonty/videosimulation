@@ -1,11 +1,11 @@
 const express = require('express');
+const rateLimiter = require('../middleware/rateLimiter');
 const { TRANSLATION_DELAY, ERROR_PROBABILITY } = require('../cofig');
 const router = express.Router();
 
 let startTime = Date.now();
 
-// GET /status route
-router.get('/', (req, res, next) => {
+router.get('/', rateLimiter, (req, res, next) => {
     try {
         const elapsedTime = Date.now() - startTime;
         const hasError = Math.random() < ERROR_PROBABILITY;

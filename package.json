@@ -1,29 +1,32 @@
-  {
+{
     "name": "heygenassignmentv1",
     "version": "1.0.0",
     "description": "heygenassignmentv1",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node src/server.js",
-      "dev": "nodemon",
-      "run-test": "node tests/integrationTest.js"
+        "test": "", 
+        "start": "node src/server.js",
+        "dev": "nodemon",
+        "run-test": "node tests/integrationTest.js"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/XayHanmonty/heygenassignment.git"
+        "type": "git",
+        "url": "git+https://github.com/XayHanmonty/heygenassignment.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/XayHanmonty/heygenassignment/issues"
+        "url": "https://github.com/XayHanmonty/heygenassignment/issues"
     },
     "homepage": "https://github.com/XayHanmonty/heygenassignment#readme",
     "dependencies": {
-      "axios": "^1.7.9",
-      "express": "^4.21.2"
+        "axios": "^1.7.9",
+        "express": "^4.21.2",
+        "express-rate-limit": "^7.5.0"
     },
     "devDependencies": {
-      "nodemon": "^3.1.9"
+        "jest": "^29.7.0",
+        "nodemon": "^3.1.9",
+        "supertest": "^7.0.0"
     }
-  }
+}
