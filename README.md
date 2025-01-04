@@ -186,7 +186,7 @@ git push origin feature-name
 ## 5.Open a pull request.
 
 # License
-This project is licensed under the ISC License.
+This project is licensed under the MIT License.
 
 # Contact
-For issues, please visit the GitHub Issues page.
+Made with ♥ by Xay Hanmonty
