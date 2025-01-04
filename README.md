@@ -35,6 +35,8 @@ This project simulates a video translation backend and provides a client library
 - Automatically starts the server, runs the client library, and stops the server after completion.
 - Demonstrates how the server and client work together.
 
+![alt text](image.png)
+
 ---
 
 ## Project Structure
@@ -159,9 +161,7 @@ npm run run-test	// Runs the integration test.
 • Containerize the server and client for deployment.
 2. More APIs:
 • Add job IDs to simulate multiple concurrent translations.
-3. Advanced Logging:
-• Add timestamps and log levels (info, error, debug).
-4. Automated Testing:
+3. Automated Testing:
 • Integrate with Jest or Mocha for additional test cases.
 
 # Contributing
