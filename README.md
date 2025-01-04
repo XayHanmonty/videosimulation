@@ -131,17 +131,33 @@ npm run run-test
 ## Expected Output:
 
 ```bash
+
 Starting integration test...
 Server is starting...
 Server started. Initializing client...
-Polling status... Attempt 1
-Status: pending
-Polling status... Attempt 2
-Status: pending
-Polling status... Attempt 3
-Status: completed
+[2025-01-04T12:11:38.559Z] [INFO] Polling status... Attempt 1
+[2025-01-04T12:11:38.600Z] [INFO] Received status: pending
+[2025-01-04T12:11:38.600Z] [INFO] Retrying in 1000ms...
+[2025-01-04T12:11:39.602Z] [INFO] Polling status... Attempt 2
+[2025-01-04T12:11:39.609Z] [INFO] Received status: pending
+[2025-01-04T12:11:39.609Z] [INFO] Retrying in 2000ms...
+[2025-01-04T12:11:41.611Z] [INFO] Polling status... Attempt 3
+[2025-01-04T12:11:41.616Z] [INFO] Received status: pending
+[2025-01-04T12:11:41.616Z] [INFO] Retrying in 4000ms...
+[2025-01-04T12:11:45.618Z] [INFO] Polling status... Attempt 4
+[2025-01-04T12:11:45.627Z] [INFO] Received status: pending
+[2025-01-04T12:11:45.627Z] [INFO] Retrying in 8000ms...
+[2025-01-04T12:11:53.629Z] [INFO] Polling status... Attempt 5
+[2025-01-04T12:11:53.637Z] [INFO] Received status: completed
+[2025-01-04T12:11:53.638Z] [SUCCESS] Translation completed successfully.
 Client Success: Translation completed!
 Stopping server...
+Server STDOUT: Server is running on http://localhost:3000
+[2025-01-04T12:11:38.590Z] GET /status
+[2025-01-04T12:11:39.606Z] GET /status
+[2025-01-04T12:11:41.614Z] GET /status
+[2025-01-04T12:11:45.624Z] GET /status
+[2025-01-04T12:11:53.635Z] GET /status
 Shutting down server...
 Server shut down gracefully.
 ```
