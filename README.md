@@ -35,7 +35,7 @@ This project simulates a video translation backend and provides a client library
 - Automatically starts the server, runs the client library, and stops the server after completion.
 - Demonstrates how the server and client work together.
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ---
 
@@ -44,7 +44,7 @@ This project simulates a video translation backend and provides a client library
 ```plaintext
 heygen-assignment/
 ├── src/
-│   ├── middleware/         # Middleware for logging and error handling
+│   ├── middleware/         # Middleware for logging, error handling and rate limiting
 │   ├── routes/             # Routes for server endpoints
 │   ├── clientLibrary.js    # Client library for polling
 │   ├── config.js           # Configuration values (delay, error probability)
@@ -88,15 +88,15 @@ npm start
 
 The server will be available at http://localhost:3000
 
-## Option 1: Run the script:
-```bash
-node tests/runClient.js
-```
-
-# Option 2: Test the /status Endpoint
+# Test the /status Endpoint
 ## Use curl or any HTTP client to test the /status endpoint:
 ```bash
 curl http://localhost:3000/status
+```
+
+## Rate Limiting Test
+```bash
+for i in {1..110}; do curl -s http://localhost:3000/status; done
 ```
 
 ## Possible responses:
@@ -157,12 +157,14 @@ npm run run-test	// Runs the integration test.
 ```
 
 ## Future Enhancements
-1. Docker Support:
-• Containerize the server and client for deployment.
-2. More APIs:
-• Add job IDs to simulate multiple concurrent translations.
-3. Automated Testing:
-• Integrate with Jest or Mocha for additional test cases.
+1.	Docker Support: Containerize the server and client for streamlined deployment and scaling.
+2.	More APIs: Introduce job IDs to handle multiple concurrent translations.
+3.	Enhanced Logging: Add structured logging with log levels and external log management integration.
+4.	Rate Limiting Improvements: Implement dynamic rate limits based on user roles or API keys.
+5.	Advanced Error Handling: Add retry mechanisms and detailed error responses for client applications.
+6.	Automated Testing: Expand coverage with Jest or Mocha for unit, integration, and performance tests.
+7.	Performance Metrics: Add Prometheus metrics and monitoring for API usage and latency tracking.
+8.	Web Interface: Develop a frontend for visualizing and managing translation tasks.
 
 # Contributing
 ## 1.Fork the repository.
