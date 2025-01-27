@@ -4,7 +4,7 @@
     "description": "heygenassignmentv1",
     "main": "index.js",
     "scripts": {
-        "test": "", 
+        "test": "",
         "start": "node src/server.js",
         "dev": "nodemon",
         "run-test": "node tests/integrationTest.js"
@@ -21,6 +21,7 @@
     "homepage": "https://github.com/XayHanmonty/heygenassignment#readme",
     "dependencies": {
         "axios": "^1.7.9",
+        "cors": "^2.8.5",
         "express": "^4.21.2",
         "express-rate-limit": "^7.5.0"
     },
@@ -28,5 +29,9 @@
         "jest": "^29.7.0",
         "nodemon": "^3.1.9",
         "supertest": "^7.0.0"
-    }
+    },
+    "directories": {
+        "test": "tests"
+    },
+    "keywords": []
 }
